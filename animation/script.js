@@ -2,18 +2,20 @@ function animation() {
     const box = document.querySelector('#box');
     box.style.position = 'relative';
     box.style.left = 0;
-
-        // 1. Postavke boxa
     box.style.width = '100px';
     box.style.height = '100px';
     box.style.backgroundColor = 'red';
-    box.style.position = 'relative';
-    box.style.left = '0px';
 
-    function animateBox () {
-        box.style.left = parseFloat(box.style.left) + 1 + 'px';   
-        
-        if (parseFloat(box.style.left) >=)......
+    let direction = 1;
+
+    function animateBox() {
+        box.style.left = parseFloat(box.style.left) + (100 * direction) + 'px';
+
+        if (parseFloat(box.style.left) >= (window.innerWidth - 100)) {
+            direction = -1;
+        } else if (parseFloat(box.style.left) <= 0) {
+            direction = 1;
+        }
     }
 
     setInterval(animateBox, 100);
