@@ -1,0 +1,16 @@
+#hamburger {
+  background: green;
+}
+#hamburger.button-active {
+  background: red;
+}
+#nav {
+  display: none;
+}
+#nav.nav-open {
+  display: block;
+}
+
+a.active {
+    color: red; /* crvena boja teksta */
+}
